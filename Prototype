@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella's Bistro - Menu</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f8f5f0; padding: 20px; }
+        .menu-container { max-width: 600px; margin: auto; background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; font-size: 28px; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #7f8c8d; font-size: 14px; margin-bottom: 25px; }
+        .category { margin-bottom: 25px; }
+        .category h2 { border-bottom: 2px solid #e74c3c; padding-bottom: 8px; color: #2c3e50; margin-bottom: 15px; }
+        .item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #eee; }
+        .item:last-child { border-bottom: none; }
+        .item-name { font-weight: 600; color: #2c3e50; }
+        .item-desc { font-size: 13px; color: #7f8c8d; margin-top: 3px; }
+        .price { font-weight: 700; color: #e74c3c; }
+        .contact { text-align: center; margin-top: 30px; font-size: 14px; color: #7f8c8d; }
+        .contact a { color: #e74c3c; text-decoration: none; font-weight: 600; }
+        .qr-placeholder { text-align: center; margin-top: 25px; font-size: 13px; color: #95a5a6; }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Bella's Bistro</h1>
+        <div class="subtitle">Fresh. Local. Delicious.</div>
+
+        <div class="category">
+            <h2>Appetizers</h2>
+            <div class="item">
+                <div>
+                    <div class="item-name">Bruschetta</div>
+                    <div class="item-desc">Toasted bread with tomatoes, basil & garlic</div>
+                </div>
+                <div class="price">$12</div>
+            </div>
+            <div class="item">
+                <div>
+                    <div class="item-name">Calamari Fritti</div>
+                    <div class="item-desc">Crispy fried squid with lemon aioli</div>
+                </div>
+                <div class="price">$16</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Main Courses</h2>
+            <div class="item">
+                <div>
+                    <div class="item-name">Grilled Salmon</div>
+                    <div class="item-desc">With roasted vegetables & herb butter</div>
+                </div>
+                <div class="price">$24</div>
+            </div>
+            <div class="item">
+                <div>
+                    <div class="item-name">Classic Burger</div>
+                    <div class="item-desc">Angus beef, cheddar, lettuce & fries</div>
+                </div>
+                <div class="price">$18</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Drinks</h2>
+            <div class="item">
+                <div>
+                    <div class="item-name">Fresh Lemonade</div>
+                    <div class="item-desc">House-made with mint</div>
+                </div>
+                <div class="price">$5</div>
+            </div>
+            <div class="item">
+                <div>
+                    <div class="item-name">Espresso</div>
+                    <div class="item-desc">Single or double shot</div>
+                </div>
+                <div class="price">$4</div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <p>📞 <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>📍 123 Main St, Your City</p>
+        </div>
+        <div class="qr-placeholder">
+            ⬅️ Scan to view this menu on your phone!
+        </div>
+    </div>
+</body>
+</html>
