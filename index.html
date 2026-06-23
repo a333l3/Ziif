@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziif | Digital Menu & QR Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ziif | Premium Digital Menus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            background: #fcfaf8; 
+            background: #121212; 
             font-family: 'Inter', sans-serif;
-            color: #1a1a1a;
+            color: #f5f5f5;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .container { 
             max-width: 700px; 
-            margin: auto; 
-            background: #ffffff; 
-            border-radius: 32px; 
-            padding: 35px 30px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
-            border: 1px solid #f0ebe5;
+            width: 100%;
+            background: #1a1a1a; 
+            border-radius: 40px; 
+            padding: 40px 35px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 1px solid #2a2a2a;
         }
 
-        /* --- Header & Profile --- */
+        /* Header & Profile */
         .header {
             display: flex;
             align-items: center;
             gap: 20px;
             padding-bottom: 25px;
-            border-bottom: 2px solid #e8e1d9;
+            border-bottom: 1px solid #2a2a2a;
             margin-bottom: 30px;
         }
         .profile-img-container {
-            width: 110px;
-            height: 110px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid #f0ebe5;
+            border: 2px solid #c9a84c; /* Gold border */
             flex-shrink: 0;
+            background: #2a2a2a;
         }
         .profile-img-container img {
             width: 100%;
@@ -47,180 +52,228 @@
         }
         .header-text h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            color: #1a1a1a;
-            letter-spacing: -0.5px;
+            font-size: 38px;
+            color: #c9a84c; /* Gold */
+            letter-spacing: 1px;
         }
         .header-text p {
-            color: #5a5249;
+            color: #a0a0a0;
             font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-top: 5px;
-            font-weight: 500;
         }
 
-        /* --- Intro Section --- */
+        /* Intro */
         .intro {
             margin-bottom: 30px;
-            background: #f8f5f1;
-            padding: 20px;
-            border-radius: 16px;
+            background: #222222;
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 4px solid #c9a84c;
         }
-        .intro h2 { font-size: 22px; margin-bottom: 10px; color: #1a1a1a; }
-        .intro p { color: #4a423a; line-height: 1.6; font-size: 15px; }
+        .intro h2 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; 
+            color: #f5f5f5; 
+            margin-bottom: 8px; 
+        }
+        .intro p { color: #b0b0b0; line-height: 1.7; font-size: 15px; font-weight: 300; }
 
-        /* --- Services --- */
-        .section-title { font-size: 20px; margin-bottom: 15px; border-left: 4px solid #b35c37; padding-left: 12px; }
-        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        /* Section Titles */
+        .section-title { 
+            font-family: 'Playfair Display', serif;
+            font-size: 22px; 
+            color: #c9a84c; 
+            margin-bottom: 20px; 
+            letter-spacing: 0.5px;
+        }
+
+        /* Services */
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 35px; }
         .service-card {
-            background: #f8f5f1;
-            padding: 15px;
-            border-radius: 12px;
+            background: #222222;
+            padding: 20px 15px;
+            border-radius: 16px;
+            border: 1px solid #2a2a2a;
+            transition: 0.3s;
         }
-        .service-card h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 5px; }
-        .service-card p { font-size: 13px; color: #5a5249; line-height: 1.4; }
+        .service-card h3 { font-size: 15px; color: #f5f5f5; margin-bottom: 5px; font-weight: 500; }
+        .service-card p { font-size: 13px; color: #888888; line-height: 1.4; font-weight: 300; }
 
-        /* --- Pricing --- */
-        .pricing-table { margin-bottom: 30px; }
+        /* Pricing */
+        .pricing-table { margin-bottom: 35px; }
         .price-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
+            padding: 18px 0;
+            border-bottom: 1px solid #2a2a2a;
         }
         .price-row:last-child { border-bottom: none; }
-        .price-desc h4 { font-size: 16px; color: #1a1a1a; }
-        .price-desc span { font-size: 13px; color: #5a5249; }
+        .price-desc h4 { font-size: 17px; color: #f5f5f5; font-weight: 500; }
+        .price-desc span { font-size: 13px; color: #888888; font-weight: 300; }
         .price-tag {
-            font-weight: 700;
-            color: #b35c37;
-            font-size: 18px;
-            background: #f8f5f1;
-            padding: 5px 12px;
-            border-radius: 20px;
+            font-weight: 600;
+            color: #c9a84c;
+            font-size: 19px;
+            background: #222222;
+            padding: 5px 16px;
+            border-radius: 30px;
+            border: 1px solid #3a3a3a;
         }
 
-        /* --- Why QR --- */
+        /* Benefits */
         .benefits {
-            background: #1a1a1a;
-            color: white;
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 25px;
+            background: #222222;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #2a2a2a;
         }
-        .benefits h3 { color: #fff; margin-bottom: 10px; font-size: 18px; }
+        .benefits h3 { 
+            font-family: 'Playfair Display', serif;
+            color: #c9a84c; 
+            margin-bottom: 15px; 
+            font-size: 20px; 
+        }
         .benefits ul { list-style: none; padding: 0; }
-        .benefits ul li { margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 8px; color: #d1d1d1; }
-        .benefits ul li::before { content: "✓"; color: #b35c37; font-weight: bold; }
+        .benefits ul li { 
+            margin-bottom: 10px; 
+            font-size: 14px; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            color: #d0d0d0; 
+            font-weight: 300;
+        }
+        .benefits ul li::before { 
+            content: "✦"; 
+            color: #c9a84c; 
+            font-size: 18px; 
+        }
 
-        /* --- CTA --- */
+        /* CTA */
         .cta {
             text-align: center;
             margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #e8e1d9;
+            padding-top: 25px;
+            border-top: 1px solid #2a2a2a;
         }
-        .cta h3 { font-size: 18px; margin-bottom: 5px; }
-        .cta p { color: #5a5249; font-size: 14px; }
+        .cta h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: #f5f5f5; margin-bottom: 5px; }
+        .cta p { color: #888888; font-size: 14px; font-weight: 300; }
         .cta a {
             display: inline-block;
-            margin-top: 12px;
-            background: #b35c37;
-            color: white;
+            margin-top: 15px;
+            background: #c9a84c;
+            color: #121212;
             text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 14px 40px;
+            border-radius: 50px;
             font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+            letter-spacing: 0.5px;
+        }
+        .cta a:hover { background: #dbb95c; transform: translateY(-2px); }
+        .footer-note { margin-top: 15px; font-size: 12px; color: #555555; letter-spacing: 1px; }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .header { flex-direction: column; text-align: center; }
+            .service-grid { grid-template-columns: 1fr; }
+            .price-row { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .price-tag { align-self: flex-start; }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         
-        <!-- HEADER -->
+        <!-- Header -->
         <div class="header">
             <div class="profile-img-container">
-                <!-- REPLACE THIS src WITH YOUR PHOTO -->
-                <img src="https://i.ibb.co/3k5qX7X/your-photo-here.jpg" alt="Ziif Founder">
+                <!-- PASTE YOUR POSTIMAGE LINK HERE -->
+                <img src="YOUR_DIRECT_LINK_HERE.jpg" alt="Ziif Founder">
             </div>
             <div class="header-text">
                 <h1>Ziif</h1>
-                <p>QR Menu & Digital Solutions</p>
+                <p>Digital Menu & QR Solutions</p>
             </div>
         </div>
 
-        <!-- INTRO -->
+        <!-- Intro -->
         <div class="intro">
-            <h2>Modernize your restaurant today.</h2>
-            <p>I build professional, custom QR menu websites for cafes and restaurants. Ditch the printing costs, update prices instantly, and give your customers a seamless dining experience.</p>
+            <h2>Elevate your dining experience.</h2>
+            <p>I craft bespoke, mobile-optimized QR menus for premium restaurants and cafes. Eliminate printing costs, update instantly, and impress your guests with seamless, contactless technology.</p>
         </div>
 
-        <!-- SERVICES -->
-        <h3 class="section-title">What I build for you</h3>
+        <!-- Services -->
+        <h3 class="section-title">Our Services</h3>
         <div class="service-grid">
             <div class="service-card">
-                <h3>📱 Mobile Menu</h3>
-                <p>A professional, phone-friendly website showing your entire menu.</p>
+                <h3>📱 Premium Mobile Menu</h3>
+                <p>Elegant, phone-friendly menu that reflects your brand identity.</p>
             </div>
             <div class="service-card">
-                <h3>📸 Custom Design</h3>
-                <p>Styled to match your restaurant’s brand with your own photos.</p>
+                <h3>✨ Bespoke Design</h3>
+                <p>Custom layouts with your restaurant's colors, logos, and photography.</p>
             </div>
             <div class="service-card">
-                <h3>🔗 QR Code</h3>
-                <p>A unique QR code printed on your tables. Customers scan to view instantly.</p>
+                <h3>🔗 Luxury QR Code</h3>
+                <p>High-quality, branded QR codes for your tables or business cards.</p>
             </div>
             <div class="service-card">
-                <h3>🔄 Instant Updates</h3>
-                <p>Prices change? New dishes? Text me, and I update your site in minutes.</p>
+                <h3>🔄 Concierge Updates</h3>
+                <p>Instant price and menu changes. You text, I update within minutes.</p>
             </div>
         </div>
 
-        <!-- PRICING -->
-        <h3 class="section-title">Simple Pricing</h3>
+        <!-- Pricing -->
+        <h3 class="section-title">Exclusive Pricing</h3>
         <div class="pricing-table">
             <div class="price-row">
                 <div class="price-desc">
-                    <h4>One-Time Setup</h4>
-                    <span>Custom menu site + QR code creation</span>
+                    <h4>Initial Setup</h4>
+                    <span>Custom mobile site + branded QR code creation</span>
                 </div>
-                <div class="price-tag">20,000 ₸</div>
+                <div class="price-tag">25,000 ₸</div>
             </div>
             <div class="price-row">
                 <div class="price-desc">
-                    <h4>Monthly Maintenance</h4>
-                    <span>Unlimited updates, hosting, & support</span>
+                    <h4>Monthly Retainer</h4>
+                    <span>Hosting, unlimited updates, and priority support</span>
                 </div>
-                <div class="price-tag">7,000 ₸/mo</div>
+                <div class="price-tag">10,000 ₸/mo</div>
             </div>
             <div class="price-row">
                 <div class="price-desc">
-                    <h4>Annual Plan</h4>
-                    <span>Full yearly access (2 months free)</span>
+                    <h4>Annual Membership</h4>
+                    <span>Full service for 12 months (includes 2 months free)</span>
                 </div>
-                <div class="price-tag">70,000 ₸/yr</div>
+                <div class="price-tag">100,000 ₸/yr</div>
             </div>
         </div>
 
-        <!-- BENEFITS -->
+        <!-- Benefits -->
         <div class="benefits">
-            <h3>Why every restaurant needs a QR menu</h3>
+            <h3>The Ziif Advantage</h3>
             <ul>
-                <li>Save money — stop re-printing paper menus every week.</li>
-                <li>Update prices instantly — no more crossed-out items.</li>
-                <li>Better hygiene — customers scan with their own phones.</li>
-                <li>Faster service — customers browse while waiting for food.</li>
-                <li>Looks professional — modern, tech-forward dining.</li>
+                <li>Save 80% on monthly printing and re-printing costs.</li>
+                <li>Update dishes and prices in real-time — no more sticker corrections.</li>
+                <li>Hygiene-focused dining — guests scan with their personal devices.</li>
+                <li>Increased table turnover — customers order faster with a clear digital view.</li>
+                <li>Modern luxury image that elevates your restaurant's reputation.</li>
             </ul>
         </div>
 
-        <!-- CONTACT -->
+        <!-- Contact -->
         <div class="cta">
-            <h3>Ready to upgrade your restaurant?</h3>
-            <p>Get your QR menu live in under 24 hours.</p>
-            <a href="tel:+77000000000">📞 Book a Free Consultation</a>
-            <p style="margin-top:12px; font-size:12px; color:#999;">Ziif — Built for Kazakh hospitality.</p>
+            <h3>Ready to go digital?</h3>
+            <p>Your luxury QR menu can be live within 24 hours.</p>
+            <a href="tel:+77000000000">📞 Book Your Consultation</a>
+            <p class="footer-note">Ziif — Luxury Digital Solutions for Kazakhstan</p>
         </div>
 
     </div>
