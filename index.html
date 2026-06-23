@@ -1,93 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella's Bistro - Menu</title>
+    <title>Шығыс Асханасы - Classic Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f8f5f0; padding: 20px; }
-        .menu-container { max-width: 600px; margin: auto; background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #2c3e50; font-size: 28px; margin-bottom: 5px; }
-        .subtitle { text-align: center; color: #7f8c8d; font-size: 14px; margin-bottom: 25px; }
-        .category { margin-bottom: 25px; }
-        .category h2 { border-bottom: 2px solid #e74c3c; padding-bottom: 8px; color: #2c3e50; margin-bottom: 15px; }
-        .item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #eee; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            /* Classic warm Kazakh color palette - earthy yellow/cream */
+            background: #f4eee1; 
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+        }
+        .menu-container { 
+            max-width: 600px; 
+            margin: auto; 
+            background: #ffffff; 
+            border-radius: 24px; 
+            padding: 25px 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.10); 
+            border: 1px solid #e0d6c5;
+        }
+        
+        /* --- PICTURE SLOTS --- */
+        .hero-image {
+            width: 100%;
+            height: 200px;
+            background-color: #d4c9b8; /* Fallback color while image loads */
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dish-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #f4eee1;
+            background: #e0d6c5;
+        }
+
+        .hero { text-align: center; padding-bottom: 20px; }
+        .hero h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 34px; 
+            color: #2c2b28; 
+            letter-spacing: -0.5px;
+        }
+        .hero .subtitle { 
+            font-size: 14px; 
+            color: #7f6e5e; 
+            margin-top: 6px; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .category { margin-bottom: 30px; }
+        .category h2 { 
+            font-size: 20px; 
+            color: #4a3f33; 
+            margin-bottom: 15px; 
+            border-bottom: 2px solid #e0d6c5;
+            padding-bottom: 8px;
+        }
+        
+        .item { 
+            display: flex; 
+            align-items: center;
+            padding: 12px 0; 
+            border-bottom: 1px dashed #ece4d7; 
+            transition: all 0.2s ease;
+        }
         .item:last-child { border-bottom: none; }
-        .item-name { font-weight: 600; color: #2c3e50; }
-        .item-desc { font-size: 13px; color: #7f8c8d; margin-top: 3px; }
-        .price { font-weight: 700; color: #e74c3c; }
-        .contact { text-align: center; margin-top: 30px; font-size: 14px; color: #7f8c8d; }
-        .contact a { color: #e74c3c; text-decoration: none; font-weight: 600; }
-        .qr-placeholder { text-align: center; margin-top: 25px; font-size: 13px; color: #95a5a6; }
+        
+        .item-details { flex: 1; }
+        .item-name { font-weight: 600; color: #2c2b28; font-size: 16px; }
+        .item-desc { font-size: 13px; color: #7f6e5e; margin-top: 3px; line-height: 1.4; }
+        .price { font-weight: 700; color: #b35c37; font-size: 16px; white-space: nowrap; }
+        
+        .contact { 
+            text-align: center; 
+            margin-top: 25px; 
+            padding-top: 20px;
+            border-top: 1px solid #e0d6c5;
+            font-size: 14px; 
+            color: #7f6e5e; 
+        }
+        .contact a { color: #4a3f33; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
+
     <div class="menu-container">
-        <h1>Bella's Bistro</h1>
-        <div class="subtitle">Fresh. Local. Delicious.</div>
+        
+        <!-- 1. BIG PICTURE AT THE TOP -->
+        <div class="hero-image">
+            <!-- Replace this src link with your client's restaurant photo -->
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Restaurant interior">
+        </div>
+
+        <div class="hero">
+            <h1>Шығыс Асханасы</h1> <!-- East Kitchen / Kazakh Restaurant Name -->
+            <div class="subtitle">Дәстүрлі Қазақ Асханасы</div> <!-- Traditional Kazakh Cuisine -->
+        </div>
 
         <div class="category">
-            <h2>Appetizers</h2>
+            <h2>🏔️ Басты тағамдар (Mains)</h2>
+            
             <div class="item">
-                <div>
-                    <div class="item-name">Bruschetta</div>
-                    <div class="item-desc">Toasted bread with tomatoes, basil & garlic</div>
+                <!-- 2. SMALL PICTURE NEXT TO DISH -->
+                <img class="dish-image" src="https://images.unsplash.com/photo-1626804475297-411d46923f3d?q=80&w=150&auto=format&fit=crop" alt="Beshbarmak">
+                <div class="item-details">
+                    <div class="item-name">Бешбармақ (Beshbarmak)</div>
+                    <div class="item-desc">Дәстүрлі қой еті, қамыр және сорпа</div>
                 </div>
-                <div class="price">$12</div>
+                <div class="price">7,500 ₸</div>
             </div>
+
             <div class="item">
-                <div>
-                    <div class="item-name">Calamari Fritti</div>
-                    <div class="item-desc">Crispy fried squid with lemon aioli</div>
+                <img class="dish-image" src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=150&auto=format&fit=crop" alt="Kazy">
+                <div class="item-details">
+                    <div class="item-name">Қазы (Kazy)</div>
+                    <div class="item-desc">Қызыл шұжық, картоп және пиязбен</div>
                 </div>
-                <div class="price">$16</div>
+                <div class="price">4,200 ₸</div>
             </div>
         </div>
 
         <div class="category">
-            <h2>Main Courses</h2>
+            <h2>🥣 Сорпалар (Soups)</h2>
             <div class="item">
-                <div>
-                    <div class="item-name">Grilled Salmon</div>
-                    <div class="item-desc">With roasted vegetables & herb butter</div>
+                <img class="dish-image" src="https://images.unsplash.com/photo-1547592166-23ac9090ec1f?q=80&w=150&auto=format&fit=crop" alt="Sorpa">
+                <div class="item-details">
+                    <div class="item-name">Сорпа (Sorpa)</div>
+                    <div class="item-desc">Қой етінің сорпасы, көкөністермен</div>
                 </div>
-                <div class="price">$24</div>
-            </div>
-            <div class="item">
-                <div>
-                    <div class="item-name">Classic Burger</div>
-                    <div class="item-desc">Angus beef, cheddar, lettuce & fries</div>
-                </div>
-                <div class="price">$18</div>
+                <div class="price">2,500 ₸</div>
             </div>
         </div>
 
         <div class="category">
-            <h2>Drinks</h2>
+            <h2>🍞 Нан мен тәттілер (Bread & Sweets)</h2>
             <div class="item">
-                <div>
-                    <div class="item-name">Fresh Lemonade</div>
-                    <div class="item-desc">House-made with mint</div>
+                <img class="dish-image" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=150&auto=format&fit=crop" alt="Baursak">
+                <div class="item-details">
+                    <div class="item-name">Бауырсақ (Baursaks)</div>
+                    <div class="item-desc">Қуырылған қамыр, балмен бірге</div>
                 </div>
-                <div class="price">$5</div>
+                <div class="price">1,800 ₸</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>🥛 Сусындар (Drinks)</h2>
+            <div class="item">
+                <div class="item-details">
+                    <div class="item-name">Қымыз (Kumys)</div>
+                    <div class="item-desc">Биенің сүтінен жасалған</div>
+                </div>
+                <div class="price">1,500 ₸</div>
             </div>
             <div class="item">
-                <div>
-                    <div class="item-name">Espresso</div>
-                    <div class="item-desc">Single or double shot</div>
+                <div class="item-details">
+                    <div class="item-name">Шұбат (Shubat)</div>
+                    <div class="item-desc">Түйенің сүтінен жасалған</div>
                 </div>
-                <div class="price">$4</div>
+                <div class="price">1,500 ₸</div>
             </div>
         </div>
 
         <div class="contact">
-            <p>📞 <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-            <p>📍 123 Main St, Your City</p>
+            <p>📞 <a href="tel:+77000000000">+7 (700) 000-00-00</a></p>
+            <p>📍 Астана, Республика көшесі, 15</p>
+            <p style="margin-top:8px; font-size:12px;">⏰ 10:00 - 23:00</p>
         </div>
-        <div class="qr-placeholder">
-            ⬅️ Scan to view this menu on your phone!
-        </div>
+
     </div>
 </body>
 </html>
